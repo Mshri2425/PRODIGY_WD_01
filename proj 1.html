@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        section {
+            margin-top: 60px; /* Ensure content is below the fixed navigation */
+            padding: 250px;
+        }
+        #home{
+            background-image: url(img2.jfif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            /* height: 100px; */
+
+        }
+        #about{
+            background-image: url(img.jfif);
+            background-repeat: no-repeat;
+            background-size:cover
+        }
+        #services{
+            background-image: url(img.jfif);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #contact{
+            background-image: url(img.jfif);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+    </style>
+    <title>Interactive Navigation Menu</title>
+</head>
+<body>
+
+    <header id="navbar">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Our Website</h2>
+        <p>This is the home section.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our company.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Discover the services we offer.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us.</p>
+    </section>
+
+    <script>
+        // Change the background color of the navigation menu when scrolling
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.style.backgroundColor = '#555';
+            } else {
+                navbar.style.backgroundColor = '#333';
+            }
+        });
+    </script>
+</body>
+</html>
